@@ -1,0 +1,19 @@
+.slider {
+  &__arrows {
+    display: flex;
+    align-items: center;
+
+    &_item {
+      &:hover {
+        & img {
+          filter: brightness(0) saturate(100%) invert(64%) sepia(32%) saturate(370%) hue-rotate(90deg) brightness(89%)
+            contrast(85%);
+        }
+      }
+
+      &:first-child {
+        margin-right: 27px;
+      }
+    }
+  }
+}

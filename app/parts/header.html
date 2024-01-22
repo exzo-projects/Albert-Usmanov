@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Project</title>
+    <meta name="description" content="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="icon" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+  <body x-data="app()">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="#" class="header__logo">
+            <img decoding="async" src="images/dist/logo.png" width="136" height="60" alt="Альберт Усманов" />
+          </a>
+          <nav class="header__nav">
+            <a href="#" class="header__nav_link header__nav_link--active">Главная</a>
+            <a href="#" class="header__nav_link">Обо мне</a>
+            <a href="#" class="header__nav_link">Акции</a>
+            <a href="#" class="header__nav_link">Подарочные сертификаты</a>
+            <a href="#" class="header__nav_link">Продукция</a>
+            <a href="#" class="header__nav_link">Адрес и контакты</a>
+          </nav>
+
+          <div class="header__buttons">
+            <a href="#">
+              <img decoding="async" src="images/dist/whatsapp.svg" width="38" height="38" alt="Whatsapp" />
+            </a>
+
+            <a href="#" class="header__cart" data-qty="2">
+              <img decoding="async" src="images/dist/cart.svg" width="35" height="34" alt="Корзина" />
+            </a>
+
+            <a @click.prevent="openModal('login')" href="" class="btn btn-outline btn-small"> Войти в аккаунт </a>
+
+            <button @click="toggleMenu" type="button" class="header__menu_button">
+              <img x-show="!isMenuActive" decoding="async" src="images/dist/burger.svg" width="38" height="38" alt="" />
+              <img
+                x-cloak
+                x-show="isMenuActive"
+                decoding="async"
+                src="images/dist/close.svg"
+                width="26"
+                height="26"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- noindex -->
+      <div x-cloak x-show.transition.origin.top.center.duration.350="isMenuActive" class="header__menu">
+        <div class="header__menu_inner">
+          <a href="#" class="header__nav_link header__nav_link--active">Главная</a>
+          <a href="#" class="header__nav_link">Обо мне</a>
+          <a href="#" class="header__nav_link">Акции</a>
+          <a href="#" class="header__nav_link">Подарочные сертификаты</a>
+          <a href="#" class="header__nav_link">Продукция</a>
+          <a href="#" class="header__nav_link">Адрес и контакты</a>
+
+          <div class="header__menu_buttons">
+            <a href="#">
+              <img decoding="async" src="images/dist/whatsapp.svg" width="38" height="38" alt="Whatsapp" />
+            </a>
+
+            <a href="" class="btn btn-outline btn-small"> Войти в аккаунт </a>
+          </div>
+        </div>
+      </div>
+      <!-- /noindex -->
+    </header>
+  </body>
+</html>

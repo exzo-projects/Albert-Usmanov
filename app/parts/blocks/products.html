@@ -1,0 +1,272 @@
+<section class="products">
+  <div class="container">
+    <div class="products__inner">
+      <div class="products__header">
+        <h2 class="title products__title">Продукция, которую можно заказать у нас</h2>
+        <div class="slider__arrows">
+          <button type="button" class="slider__arrows_item slider__arrows_item--prev">
+            <img decoding="async" src="images/dist/arrow-prev.svg" width="57" height="18" alt="" />
+          </button>
+          <button type="button" class="slider__arrows_item slider__arrows_item--next">
+            <img decoding="async" src="images/dist/arrow-next.svg" width="57" height="18" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <div class="catalog__tabs-wrapper">
+        <div class="catalog__tabs">
+          <button
+            @click="selectTab('new')"
+            :class="{'catalog__tabs_item--active': tab == 'new'}"
+            type="button"
+            class="catalog__tabs_item catalog__tabs_item--active"
+          >
+            Новое поступление
+          </button>
+          <button
+            @click="selectTab('hot')"
+            :class="{'catalog__tabs_item--active': tab == 'hot'}"
+            type="button"
+            class="catalog__tabs_item"
+          >
+            Хиты продаж
+          </button>
+          <button
+            @click="selectTab('popular')"
+            :class="{'catalog__tabs_item--active': tab == 'popular'}"
+            type="button"
+            class="catalog__tabs_item"
+          >
+            Популярное сейчас
+          </button>
+        </div>
+      </div>
+
+      <div class="catalog__items">
+        <div x-show="tab == 'new'" class="catalog__slider">
+          <div class="catalog__container swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/promo-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div x-cloak x-show="tab == 'hot'" class="catalog__slider">
+          <div class="catalog__container swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/promo-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div x-cloak x-show="tab == 'popular'" class="catalog__slider">
+          <div class="catalog__container swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/promo-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="products__link">
+        <a href="#" class="btn btn-outline btn-small">Перейти в магазин</a>
+      </div>
+    </div>
+  </div>
+</section>

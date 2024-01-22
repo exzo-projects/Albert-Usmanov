@@ -1,0 +1,56 @@
+<!--#include virtual="/parts/blocks/modals.html" -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <img decoding="async" src="images/dist/logo.png" width="174" height="76" alt="Альберт Усманов" />
+      </div>
+      <div class="footer__nav">
+        <div class="footer__nav_block">
+          <a href="#" class="footer__nav_link">Главная</a>
+          <a href="#" class="footer__nav_link">Обо мне</a>
+          <a href="#" class="footer__nav_link">Акции</a>
+        </div>
+
+        <div class="footer__nav_block">
+          <a href="#" class="footer__nav_link">Продукция</a>
+          <a href="#" class="footer__nav_link">Новое поступление</a>
+          <a href="#" class="footer__nav_link">Хиты продаж</a>
+        </div>
+
+        <div class="footer__nav_block">
+          <span class="footer__nav_link">Сертификаты</span>
+          <a href="#" class="footer__nav_link">Подарочные<br />сертификаты</a>
+        </div>
+
+        <div class="footer__nav_block">
+          <a href="#" class="footer__nav_link">Адрес и контакты</a>
+          <span href="#" class="footer__nav_link">г. Москва, Мамоновский пер. 4, с. 1, офис 1а</span>
+          <a href="#" class="footer__nav_link">+74951200388</a>
+        </div>
+      </div>
+
+      <div class="footer__button">
+        <button @click="openModal('contact')" type="button" class="btn btn-outline btn-small">Проконсультироваться</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span>© DECIEM Beauty Group Inc. 2023. All rights reserved</span>
+    <div class="footer__payments">
+      <img src="images/dist/mir-payment.svg" width="50" alt="">
+      <img src="images/dist/mir-payment.svg" width="50" alt="">
+      <img src="images/dist/mir-payment.svg" width="50" alt="">
+      <img src="images/dist/mir-payment.svg" width="50" alt="">
+    </div>
+  </div>
+</footer>
+
+<script src="js/alpine.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

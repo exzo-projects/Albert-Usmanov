@@ -1,0 +1,177 @@
+.staff {
+  margin-top: 85px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    & img {
+      width: 100%;
+      aspect-ratio: 10 / 9;
+      object-fit: cover;
+      max-width: 620px;
+    }
+
+    &_info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+    }
+
+    &_name {
+      font-size: 64px;
+      line-height: 1;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 20px;
+      transform: translateX(-11%);
+    }
+
+    &_desc {
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 500;
+      display: block;
+      max-width: 650px;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+    }
+
+    &:nth-child(even) & {
+      &_info {
+        margin-left: 0;
+        margin-right: 20px;
+        align-items: flex-end;
+        text-align: right;
+      }
+
+      &_desc {
+        text-align: left;
+      }
+
+      &_name {
+        transform: translateX(11%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .staff {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .staff {
+    &__item {
+      & img {
+        max-width: 45%;
+      }
+
+      &_name {
+        font-size: 48px;
+      }
+
+      &_desc {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .staff {
+    &__item {
+      &_name {
+        font-size: 40px;
+      }
+
+      &_desc {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .staff {
+    &__item {
+      flex-direction: column;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+
+      &:nth-child(even) & {
+        &_info {
+          align-items: unset;
+          margin-right: 0;
+        }
+
+        &_desc {
+          text-align: justify;
+        }
+
+        &_name {
+          transform: none;
+        }
+      }
+
+      & img {
+        max-width: 600px;
+      }
+
+      &_info {
+        margin-left: 0;
+        margin-top: 35px;
+      }
+
+      &_name {
+        font-size: 40px;
+        transform: none;
+        text-align: center;
+      }
+
+      &_desc {
+        font-size: 14px;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .staff {
+    &__item {
+      &_name {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .staff {
+    margin-top: 50px;
+  }
+}

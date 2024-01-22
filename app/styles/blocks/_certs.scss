@@ -1,0 +1,18 @@
+.certs {
+  margin-top: 140px;
+}
+
+@media screen and (max-width: 1200px) {
+  .certs {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .certs {
+    margin-top: 50px;
+
+    &__link {
+      margin-top: 40px;
+    }
+  }
+}

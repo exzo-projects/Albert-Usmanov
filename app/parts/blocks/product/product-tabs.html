@@ -1,0 +1,81 @@
+<section class="product-tabs">
+  <div class="container">
+    <div class="product-tabs__inner">
+      <div class="product-tabs__buttons">
+        <button
+          @click="selectTab('components')"
+          :class="{'product-tabs__button--active': productTab == 'components'}"
+          type="button"
+          class="product-tabs__button"
+        >
+          Активные компоненты
+        </button>
+        <button
+          @click="selectTab('ingredients')"
+          :class="{'product-tabs__button--active': productTab == 'ingredients'}"
+          type="button"
+          class="product-tabs__button"
+        >
+          Ингредиенты
+        </button>
+        <button
+          @click="selectTab('usage')"
+          :class="{'product-tabs__button--active': productTab == 'usage'}"
+          type="button"
+          class="product-tabs__button"
+        >
+          Применение
+        </button>
+      </div>
+
+      <div class="product-tabs__content">
+        <div x-show="productTab == 'components'" class="product-tabs__grid">
+          <div class="product-tabs__grid_item">
+            <img decoding="async" src="images/dist/component-placeholder.png" height="130" alt="" />
+            <span class="product-tabs__grid_item-title">Масло абрикосовых косточек</span>
+            <span class="product-tabs__grid_item-desc"
+              >Благотворно воздействуют на кожу голову и волосы, предотвращают шелушение и очищают.
+            </span>
+          </div>
+          <div class="product-tabs__grid_item">
+            <img decoding="async" src="images/dist/component-placeholder.png" height="130" alt="" />
+            <span class="product-tabs__grid_item-title">Масло абрикосовых косточек</span>
+            <span class="product-tabs__grid_item-desc"
+              >Благотворно воздействуют на кожу голову и волосы, предотвращают шелушение и очищают.
+            </span>
+          </div>
+          <div class="product-tabs__grid_item">
+            <img decoding="async" src="images/dist/component-placeholder.png" height="130" alt="" />
+            <span class="product-tabs__grid_item-title">Масло абрикосовых косточек</span>
+            <span class="product-tabs__grid_item-desc"
+              >Благотворно воздействуют на кожу голову и волосы, предотвращают шелушение и очищают.
+            </span>
+          </div>
+          <div class="product-tabs__grid_item">
+            <img decoding="async" src="images/dist/component-placeholder.png" height="130" alt="" />
+            <span class="product-tabs__grid_item-title">Масло абрикосовых косточек</span>
+            <span class="product-tabs__grid_item-desc"
+              >Благотворно воздействуют на кожу голову и волосы, предотвращают шелушение и очищают.
+            </span>
+          </div>
+        </div>
+
+        <div x-cloak x-show="productTab == 'ingredients'" class="product-tabs__text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quaerat dolorem assumenda amet pariatur
+            voluptatum minus inventore et est officia, incidunt repudiandae nihil ab modi mollitia ipsam perferendis
+            recusandae at.
+          </p>
+        </div>
+
+        <div x-cloak x-show="productTab == 'usage'" class="product-tabs__text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quaerat dolorem assumenda amet pariatur
+            voluptatum minus inventore et est officia, incidunt repudiandae nihil ab modi mollitia ipsam perferendis
+            recusandae at.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
