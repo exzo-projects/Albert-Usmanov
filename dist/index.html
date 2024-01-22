@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Project</title>
+    <meta name="description" content="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="icon" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+  <body x-data="app()">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="#" class="header__logo">
+            <img decoding="async" src="images/dist/logo.png" width="136" height="60" alt="Альберт Усманов" />
+          </a>
+          <nav class="header__nav">
+            <a href="#" class="header__nav_link header__nav_link--active">Главная</a>
+            <a href="#" class="header__nav_link">Обо мне</a>
+            <a href="#" class="header__nav_link">Акции</a>
+            <a href="#" class="header__nav_link">Подарочные сертификаты</a>
+            <a href="#" class="header__nav_link">Продукция</a>
+            <a href="#" class="header__nav_link">Адрес и контакты</a>
+          </nav>
+
+          <div class="header__buttons">
+            <a href="#">
+              <img decoding="async" src="images/dist/whatsapp.svg" width="38" height="38" alt="Whatsapp" />
+            </a>
+
+            <a href="#" class="header__cart" data-qty="2">
+              <img decoding="async" src="images/dist/cart.svg" width="35" height="34" alt="Корзина" />
+            </a>
+
+            <a @click.prevent="openModal('login')" href="" class="btn btn-outline btn-small"> Войти в аккаунт </a>
+
+            <button @click="toggleMenu" type="button" class="header__menu_button">
+              <img x-show="!isMenuActive" decoding="async" src="images/dist/burger.svg" width="38" height="38" alt="" />
+              <img
+                x-cloak
+                x-show="isMenuActive"
+                decoding="async"
+                src="images/dist/close.svg"
+                width="26"
+                height="26"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- noindex -->
+      <div x-cloak x-show.transition.origin.top.center.duration.350="isMenuActive" class="header__menu">
+        <div class="header__menu_inner">
+          <a href="#" class="header__nav_link header__nav_link--active">Главная</a>
+          <a href="#" class="header__nav_link">Обо мне</a>
+          <a href="#" class="header__nav_link">Акции</a>
+          <a href="#" class="header__nav_link">Подарочные сертификаты</a>
+          <a href="#" class="header__nav_link">Продукция</a>
+          <a href="#" class="header__nav_link">Адрес и контакты</a>
+
+          <div class="header__menu_buttons">
+            <a href="#">
+              <img decoding="async" src="images/dist/whatsapp.svg" width="38" height="38" alt="Whatsapp" />
+            </a>
+
+            <a href="" class="btn btn-outline btn-small"> Войти в аккаунт </a>
+          </div>
+        </div>
+      </div>
+      <!-- /noindex -->
+    </header>
+  </body>
+</html>
+
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <h1 class="hero__title">Студия красоты Альберта Усманова</h1>
+      <span class="hero__text">
+        Господа, реализация намеченных плановых заданий обеспечивает актуальность системы обучения кадров,
+        соответствующей насущным потребностям.
+      </span>
+    </div>
+  </div>
+
+  <div class="hero__slider">
+    <div id="hero-slider" class="hero__container swiper">
+      <div class="swiper-wrapper">
+        <a href="#" class="hero__item swiper-slide">
+          <img decoding="async" src="images/dist/room-women.jpg" alt="Женский зал" />
+          <button type="button" class="btn btn-outline btn-medium hero__item_btn">Женский зал</button>
+        </a>
+        <a href="#" class="hero__item swiper-slide">
+          <img decoding="async" src="images/dist/room-man.jpg" alt="Мужской зал" />
+          <button type="button" class="btn btn-outline btn-medium hero__item_btn">Мужской зал</button>
+        </a>
+        <a href="#" class="hero__item swiper-slide">
+          <img decoding="async" src="images/dist/room-children.jpg" alt="Детский зал" />
+          <button type="button" class="btn btn-outline btn-medium hero__item_btn">Детский зал</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="promo">
+  <div class="container">
+    <h2 class="title promo__title">Акции, которые действуют в салоне на данный момент</h2>
+  </div>
+
+  <div class="promo__slider">
+    <div id="promo-slider" class="promo__container swiper">
+      <div class="swiper-wrapper">
+        <a href="#" class="promo__item swiper-slide">
+          <img decoding="async" class="promo__item_img" src="images/dist/promo-placeholder.jpg" alt="" />
+          <div class="promo__item_meta">
+            <span>Заголовок акции</span>
+            <img decoding="async" src="images/dist/arrow.svg" width="110" height="18" alt="" />
+          </div>
+        </a>
+        <a href="#" class="promo__item swiper-slide">
+          <img decoding="async" class="promo__item_img" src="images/dist/promo-placeholder.jpg" alt="" />
+          <div class="promo__item_meta">
+            <span>Заголовок акции</span>
+            <img decoding="async" src="images/dist/arrow.svg" width="110" height="18" alt="" />
+          </div>
+        </a>
+        <a href="#" class="promo__item swiper-slide">
+          <img decoding="async" class="promo__item_img" src="images/dist/promo-placeholder.jpg" alt="" />
+          <div class="promo__item_meta">
+            <span>Заголовок акции</span>
+            <img decoding="async" src="images/dist/arrow.svg" width="110" height="18" alt="" />
+          </div>
+        </a>
+        <a href="#" class="promo__item swiper-slide">
+          <img decoding="async" class="promo__item_img" src="images/dist/promo-placeholder.jpg" alt="" />
+          <div class="promo__item_meta">
+            <span>Заголовок акции</span>
+            <img decoding="async" src="images/dist/arrow.svg" width="110" height="18" alt="" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products">
+  <div class="container">
+    <div class="products__inner">
+      <div class="products__header">
+        <h2 class="title products__title">Продукция, которую можно заказать у нас</h2>
+        <div class="slider__arrows">
+          <button type="button" class="slider__arrows_item slider__arrows_item--prev">
+            <img decoding="async" src="images/dist/arrow-prev.svg" width="57" height="18" alt="" />
+          </button>
+          <button type="button" class="slider__arrows_item slider__arrows_item--next">
+            <img decoding="async" src="images/dist/arrow-next.svg" width="57" height="18" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <div class="catalog__tabs-wrapper">
+        <div class="catalog__tabs">
+          <button
+            @click="selectTab('new')"
+            :class="{'catalog__tabs_item--active': tab == 'new'}"
+            type="button"
+            class="catalog__tabs_item catalog__tabs_item--active"
+          >
+            Новое поступление
+          </button>
+          <button
+            @click="selectTab('hot')"
+            :class="{'catalog__tabs_item--active': tab == 'hot'}"
+            type="button"
+            class="catalog__tabs_item"
+          >
+            Хиты продаж
+          </button>
+          <button
+            @click="selectTab('popular')"
+            :class="{'catalog__tabs_item--active': tab == 'popular'}"
+            type="button"
+            class="catalog__tabs_item"
+          >
+            Популярное сейчас
+          </button>
+        </div>
+      </div>
+
+      <div class="catalog__items">
+        <div x-show="tab == 'new'" class="catalog__slider">
+          <div class="catalog__container swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/promo-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div x-cloak x-show="tab == 'hot'" class="catalog__slider">
+          <div class="catalog__container swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/promo-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div x-cloak x-show="tab == 'popular'" class="catalog__slider">
+          <div class="catalog__container swiper">
+            <div class="swiper-wrapper">
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/product-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+
+              <a href="#" class="catalog__item swiper-slide">
+                <div class="catalog__item_img">
+                  <img decoding="async" src="images/dist/promo-placeholder.jpg" alt="" />
+                </div>
+                <span class="catalog__item_title"> DAVINES nounou shampoo </span>
+                <span class="catalog__item_desc"> Питательный шампунь для уплотнения волос </span>
+                <div class="catalog__item_meta">
+                  <span class="catalog__item_price"> 2385 ₽ </span>
+                  <button type="button" class="catalog__item_button">
+                    <img decoding="async" src="images/dist/arrow-next.svg" width="42" height="13" alt="" />
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="products__link">
+        <a href="#" class="btn btn-outline btn-small">Перейти в магазин</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts">
+  <div class="container">
+    <div class="contacts__inner">
+      <div class="contacts__map">
+        <script
+          type="text/javascript"
+          charset="utf-8"
+          async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A997d19c85612efcacee8c1376b25e7d01a46864075cf1c9f121ad0f846a47a9b&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"
+        ></script>
+      </div>
+
+      <div class="contacts__info">
+        <h2 class="title contacts__title">Вы можете найти нас по адресу или связаться с нами</h2>
+
+        <div class="contacts__meta">
+          <div class="contacts__meta_item">
+            <img decoding="async" src="images/dist/geo-icon.svg" width="30" height="30" alt="" />
+            <span> г. Москва, Мамоновский пер. 4, с. 1, офис 1а </span>
+          </div>
+
+          <a href="#" target="_blank" class="contacts__meta_item">
+            <img decoding="async" src="images/dist/phone-icon.svg" width="26" height="26" alt="" />
+            <span> +74951200388 </span>
+          </a>
+
+          <a href="#" target="_blank" class="contacts__meta_item">
+            <img decoding="async" src="images/dist/mail-icon.svg" width="34" height="22" alt="" />
+            <span> info@site.ru </span>
+          </a>
+
+          <a href="#" target="_blank" class="contacts__meta_item">
+            <img decoding="async" src="images/dist/web-icon.svg" width="26" height="26" alt="" />
+            <span> site.com </span>
+          </a>
+        </div>
+
+        <div class="contacts__button">
+          <button @click="openModal('contact')" type="button" class="btn btn-filled btn-medium">Записаться на прием</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div x-cloak x-show.transition.opacity.duration.350ms="modal == 'contact'" class="modal modal-contact">
+  <div @click.self="closeModal" class="modal__inner">
+    <div x-show.transition.scale.origin.center.duration.350ms="modal == 'contact'" class="modal__body">
+      <button @click="closeModal" type="button" class="modal__close">
+        <img decoding="async" src="images/dist/close.svg" width="18" height="18" alt="" />
+      </button>
+
+      <span class="title title--small modal__title"> Оставьте данные для обратной связи </span>
+
+      <form action="" method="POST" class="modal__form">
+        <div class="modal__fields">
+          <div class="modal__field">
+            <span class="modal__field_label">ФИО</span>
+            <input class="modal__field_input" type="text" placeholder="Шумилов Николай Александрович" required />
+          </div>
+
+          <div class="modal__field">
+            <span class="modal__field_label">Телефон</span>
+            <input class="modal__field_input" type="text" placeholder="+74232497777" required />
+          </div>
+
+          <div class="modal__field">
+            <span class="modal__field_label">Email</span>
+            <input class="modal__field_input" type="email" placeholder="example@mail.com" required />
+          </div>
+
+          <div class="modal__field">
+            <span class="modal__field_label">Комментарий</span>
+            <input class="modal__field_input" type="text" placeholder="Я хотел бы заказать продукт, но не ...." />
+          </div>
+        </div>
+
+        <div class="modal__submit">
+          <button type="submit" class="btn btn-large btn-filled">Отправить данные</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div x-cloak x-show.transition.opacity.duration.350ms="modal == 'login'" class="modal modal-login">
+  <div @click.self="closeModal" class="modal__inner">
+    <div x-show.transition.scale.origin.center.duration.350ms="modal == 'login'" class="modal__body">
+      <button @click="closeModal" type="button" class="modal__close">
+        <img decoding="async" src="images/dist/close.svg" width="18" height="18" alt="" />
+      </button>
+
+      <span class="title title--small modal__title"> Введите данные входа </span>
+
+      <form action="" method="POST" class="modal__form">
+        <div class="modal__fields">
+          <div class="modal__field">
+            <span class="modal__field_label">Почта</span>
+            <input class="modal__field_input" type="email" placeholder="Введите почту" required />
+          </div>
+
+          <div class="modal__field">
+            <span class="modal__field_label">Пароль</span>
+            <input class="modal__field_input" type="password" placeholder="Введите пароль" required />
+          </div>
+        </div>
+
+        <div class="modal__submit">
+          <button type="submit" class="btn btn-large btn-filled">Войти</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <img decoding="async" src="images/dist/logo.png" width="174" height="76" alt="Альберт Усманов" />
+      </div>
+      <div class="footer__nav">
+        <div class="footer__nav_block">
+          <a href="#" class="footer__nav_link">Главная</a>
+          <a href="#" class="footer__nav_link">Обо мне</a>
+          <a href="#" class="footer__nav_link">Акции</a>
+        </div>
+
+        <div class="footer__nav_block">
+          <a href="#" class="footer__nav_link">Продукция</a>
+          <a href="#" class="footer__nav_link">Новое поступление</a>
+          <a href="#" class="footer__nav_link">Хиты продаж</a>
+        </div>
+
+        <div class="footer__nav_block">
+          <span class="footer__nav_link">Сертификаты</span>
+          <a href="#" class="footer__nav_link">Подарочные<br />сертификаты</a>
+        </div>
+
+        <div class="footer__nav_block">
+          <a href="#" class="footer__nav_link">Адрес и контакты</a>
+          <span href="#" class="footer__nav_link">г. Москва, Мамоновский пер. 4, с. 1, офис 1а</span>
+          <a href="#" class="footer__nav_link">+74951200388</a>
+        </div>
+      </div>
+
+      <div class="footer__button">
+        <button @click="openModal('contact')" type="button" class="btn btn-outline btn-small">Проконсультироваться</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span>© DECIEM Beauty Group Inc. 2023. All rights reserved</span>
+    <div class="footer__payments">
+      <img src="images/dist/mir-payment.svg" width="50" alt="">
+      <img src="images/dist/mir-payment.svg" width="50" alt="">
+      <img src="images/dist/mir-payment.svg" width="50" alt="">
+      <img src="images/dist/mir-payment.svg" width="50" alt="">
+    </div>
+  </div>
+</footer>
+
+<script src="js/alpine.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
