@@ -40,6 +40,10 @@
     border-radius: 3px;
     height: auto !important;
 
+    &.swiper-slide {
+      display: flex;
+    }
+
     &:hover & {
       &_title {
         color: $green;

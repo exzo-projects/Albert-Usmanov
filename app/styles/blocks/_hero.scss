@@ -43,15 +43,18 @@
   }
 
   &__slider {
-    margin-top: 55px;
+    max-width: 1920px;
+    margin: 55px auto 0 auto;
   }
 
-  &__container:not(.swiper-initialized) {
-    & .swiper-wrapper {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
-      box-sizing: border-box;
+  &__container {
+    &:not(.swiper-initialized) {
+      & .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        box-sizing: border-box;
+      }
     }
   }
 
